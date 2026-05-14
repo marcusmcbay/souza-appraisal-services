@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Souza Appraisal Services</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+
+        <div class="navbar">
+
+            <div class="logo">
+                Souza Appraisal Services
+            </div>
+
+            <nav>
+
+                <ul>
+
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="ourteam.html">Our Team</a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html">Contact Us</a>
+                    </li>
+
+                    <li class="dropdown">
+
+                        <button class="dropdown-button">
+                            About Us ▼
+                        </button>
+
+                        <ul class="dropdown-menu">
+
+                            <li>
+                                <a href="resume.html">
+                                    Resumés and Credentials
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="clsv.html">
+                                    Client List and Service Area
+                                </a>
+                            </li>
+
+                        </ul>
+
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+    <main class="homepage-wrapper">
+
+        <section class="homepage-top-links">
+
+            <div>Agriculture</div>
+            <div>Commercial</div>
+            <div>Eminent Domain</div>
+
+        </section>
+
+        <section class="homepage-main-content">
+
+            <h1 class="homepage-title">
+                Souza Appraisal Services
+            </h1>
+
+            <p>
+                specializes in the valuation of commercial and agricultural properties,
+                including properties subject to eminent domain. Market value appraisals
+                for lending purposes, asset management and estate settlement represent a
+                major component of the company’s work.
+            </p>
+
+            <p>
+                The firm is able to meet the needs of government agencies requiring
+                appraisal of eminent domain properties as well as the needs of lenders,
+                attorneys and private parties with individual property valuation
+                requirements.
+            </p>
+
+            <ul>
+
+                <li>
+                    <strong>Mark Souza</strong> is the principal and senior appraiser with
+                    associate membership in the Appraisal Institute and the American
+                    Society of Farm Managers and Rural Appraisers.
+                </li>
+
+                <li>
+                    <strong>Associate appraisers</strong> are experienced, licensed and
+                    well-qualified.
+                </li>
+
+                <li>
+                    Please visit <strong>Our Team</strong> and <strong>About Us</strong>
+                    pages to view our resumés and credentials.
+                </li>
+
+            </ul>
+
+        </section>
+
+        <hr class="homepage-divider">
+
+        <section class="homepage-bottom-section">
+
+            <div class="homepage-image-box">
+
+                <img src="images/homepage.png" alt="Homepage Banner">
+
+            </div>
+
+            <div class="homepage-orgs">
+
+                <h2>
+                    We belong to the following appraisal organizations:
+                </h2>
+
+                <p>
+                    Appraisal Institute
+                </p>
+
+                <p>
+                    American Society of Farm Managers & Rural Appraisers
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script>
+
+        const dropdownButton = document.querySelector(".dropdown-button");
+        const dropdownMenu = document.querySelector(".dropdown-menu");
+
+        dropdownButton.addEventListener("click", () => {
+
+            dropdownMenu.classList.toggle("show");
+
+        });
+
+        window.addEventListener("click", (e) => {
+
+            if (!e.target.matches(".dropdown-button")) {
+
+                dropdownMenu.classList.remove("show");
+
+            }
+
+        });
+
+    </script>
+
+</body>
+</html>

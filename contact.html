@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Contact Us - Souza Appraisal Services
+    </title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <header>
+
+        <div class="navbar">
+
+            <div class="logo">
+                Souza Appraisal Services
+            </div>
+
+            <nav>
+
+                <ul>
+
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="ourteam.html">Our Team</a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html">Contact Us</a>
+                    </li>
+
+                    <li class="dropdown">
+
+                        <button class="dropdown-button">
+                            About Us ▼
+                        </button>
+
+                        <ul class="dropdown-menu">
+
+                            <li>
+                                <a href="resume.html">
+                                    Resumés and Credentials
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="clsv.html">
+                                    Client List and Service Area
+                                </a>
+                            </li>
+
+                        </ul>
+
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+    <main class="page-content">
+
+        <h1>Contact Form</h1>
+
+        <form
+            id="contact-form"
+            class="contact-form"
+            action="https://formspree.io/f/mkoyazvo"
+            method="POST"
+        >
+
+            <label for="name">
+                Enter your first and last name:
+            </label>
+
+            <input
+                type="text"
+                id="name"
+                name="name"
+                required
+            >
+
+            <label for="email">
+                Enter your email:
+            </label>
+
+            <input
+                type="email"
+                id="email"
+                name="email"
+                required
+            >
+
+            <label for="message">
+                Enter your message:
+            </label>
+
+            <textarea
+                id="message"
+                name="message"
+                rows="6"
+                required
+            ></textarea>
+
+            <button type="submit">
+                Send
+            </button>
+
+        </form>
+
+        <p id="success-message"
+           style="
+                display:none;
+                color:green;
+                font-size:18px;
+                margin-top:20px;
+           ">
+            Your message has been sent successfully.
+        </p>
+
+        <p>
+            Thank you for reaching out!
+            We will make every effort to respond
+            to your e-mail within 24-48 hours.
+        </p>
+
+        <h2>Contact Information</h2>
+
+        <h5>Mailing Address:</h5>
+
+        <p>
+            P.O. Box 1804<br>
+            Turlock, CA 95381-1804
+        </p>
+
+    </main>
+
+    <script>
+
+        const dropdownButton =
+            document.querySelector(".dropdown-button");
+
+        const dropdownMenu =
+            document.querySelector(".dropdown-menu");
+
+        dropdownButton.addEventListener("click", () => {
+
+            dropdownMenu.classList.toggle("show");
+
+        });
+
+        window.addEventListener("click", (e) => {
+
+            if (!e.target.matches(".dropdown-button")) {
+
+                dropdownMenu.classList.remove("show");
+
+            }
+
+        });
+
+        const form =
+            document.getElementById("contact-form");
+
+        const successMessage =
+            document.getElementById("success-message");
+
+        form.addEventListener("submit", async function(event) {
+
+            event.preventDefault();
+
+            const formData = new FormData(form);
+
+            const response = await fetch(form.action, {
+
+                method: "POST",
+
+                body: formData,
+
+                headers: {
+                    'Accept': 'application/json'
+                }
+
+            });
+
+            if (response.ok) {
+
+                successMessage.style.display = "block";
+
+                form.reset();
+
+            } else {
+
+                alert("There was a problem sending your message.");
+
+            }
+
+        });
+
+    </script>
+
+</body>
+</html>

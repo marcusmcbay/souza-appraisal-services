@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Client List and Service Area - Souza Appraisal Services
+    </title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <header>
+
+        <div class="navbar">
+
+            <div class="logo">
+                Souza Appraisal Services
+            </div>
+
+            <nav>
+
+                <ul>
+
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="ourteam.html">Our Team</a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html">Contact Us</a>
+                    </li>
+
+                    <li class="dropdown">
+
+                        <button class="dropdown-button">
+                            About Us ▼
+                        </button>
+
+                        <ul class="dropdown-menu">
+
+                            <li>
+                                <a href="resume.html">
+                                    Resumés and Credentials
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="clsv.html">
+                                    Client List and Service Area
+                                </a>
+                            </li>
+
+                        </ul>
+
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+    <main class="page-content">
+
+        <div class="service-area-layout">
+
+            <div class="service-area-text">
+
+                <h1>
+                    Service Area Description:
+                </h1>
+
+                <p>
+                    The service area of Souza Appraisal Services extends
+                    throughout California's Central Valley from the foothills
+                    of the Sierra's to the East Bay Area.
+                </p>
+
+                <p>
+                    The primary counties we service are highlighted in yellow
+                    and the secondary counties are in light blue on the county map.
+                </p>
+
+            </div>
+
+            <div class="service-area-image">
+
+                <img
+                    src="images/CA MAP.png"
+                    alt="California Service Area Map"
+                >
+
+            </div>
+
+        </div>
+
+        <section class="client-list-section">
+
+            <h1>
+                Representative List of Clients:
+            </h1>
+
+            <ul class="client-list">
+
+                <li>AgAmerica Lending</li>
+                <li>Allstate Appraisal</li>
+                <li>Alpha Realty Advisors</li>
+                <li>BAC Community Bank</li>
+                <li>Bank of Stockton</li>
+                <li>California Wild Life Conservation Board</li>
+                <li>City of Livingston</li>
+                <li>City of Manteca</li>
+                <li>City of Patterson</li>
+                <li>City of Stockton</li>
+                <li>City of Tracy</li>
+                <li>Equitable Agri Finance</li>
+                <li>Farmer Mac</li>
+                <li>Farmers & Merchant Bank</li>
+                <li>Farm Plus Financial</li>
+                <li>Farm Service Agency</li>
+                <li>Fremont Bank</li>
+                <li>Hamner, Jewell & Associates</li>
+                <li>Heritage Bank of Commerce</li>
+                <li>Mission Bank</li>
+                <li>Nebraska State Bank</li>
+                <li>Oak Valley Community Bank</li>
+                <li>PACT Capital</li>
+                <li>Prudential Agricultural Real Estate</li>
+                <li>Sacramento County</li>
+                <li>San Joaquin County</li>
+                <li>Service 1st LLC</li>
+                <li>Stanislaus County</li>
+                <li>Tri-Counties Bank</li>
+                <li>Turlock Irrigation District</li>
+                <li>City of Turlock</li>
+                <li>U.S. Dept of Agriculture</li>
+                <li>Valley Ag Loans, Inc.</li>
+                <li>Wildlife Conservation Board</li>
+                <li>Bank of America</li>
+                
+            </ul>
+
+        </section>
+
+    </main>
+
+    <script>
+
+        const dropdownButton =
+            document.querySelector(".dropdown-button");
+
+        const dropdownMenu =
+            document.querySelector(".dropdown-menu");
+
+        dropdownButton.addEventListener("click", () => {
+
+            dropdownMenu.classList.toggle("show");
+
+        });
+
+        window.addEventListener("click", (e) => {
+
+            if (!e.target.matches(".dropdown-button")) {
+
+                dropdownMenu.classList.remove("show");
+
+            }
+
+        });
+
+    </script>
+
+</body>
+
+</html>
