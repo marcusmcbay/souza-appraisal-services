@@ -541,3 +541,173 @@ nav a:hover {
         max-width: 400px;
     }
 }
+
+/* GLOBAL MOBILE IMPROVEMENTS */
+
+@media (max-width: 900px) {
+
+    header {
+
+        padding: 16px;
+    }
+
+    .navbar {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 18px;
+    }
+
+    .logo {
+
+        margin-right: 0;
+
+        font-size: 22px;
+    }
+
+    nav ul {
+
+        flex-wrap: wrap;
+
+        gap: 16px;
+    }
+
+    .homepage-wrapper {
+
+        padding: 20px;
+    }
+
+    .homepage-top-links {
+
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 12px;
+
+        margin-bottom: 30px;
+    }
+
+    .homepage-title {
+
+        font-size: 42px;
+
+        line-height: 1.1;
+    }
+
+    .homepage-main-content p {
+
+        font-size: 18px;
+    }
+
+    .homepage-main-content li {
+
+        font-size: 17px;
+    }
+
+    .homepage-bottom-section {
+
+        flex-direction: column;
+
+        gap: 40px;
+
+        text-align: center;
+    }
+
+    .homepage-image-box img {
+
+        width: 100%;
+
+        max-width: 100%;
+    }
+
+    .homepage-orgs {
+
+        max-width: 100%;
+    }
+
+    .homepage-orgs h2 {
+
+        font-size: 28px;
+    }
+
+    .homepage-orgs p {
+
+        font-size: 18px;
+    }
+
+    .page-content {
+
+        padding: 20px;
+    }
+
+    .client-list {
+
+        columns: 1;
+    }
+
+    .member-name {
+
+        font-size: 38px;
+    }
+
+    .member-title {
+
+        font-size: 18px;
+    }
+
+    .member-header {
+
+        flex-direction: column;
+    }
+
+    .member-right img {
+
+        width: 180px;
+    }
+
+    .member-bottom-grid {
+
+        flex-direction: column;
+
+        gap: 40px;
+    }
+
+    .service-area-layout {
+
+        flex-direction: column;
+
+        text-align: center;
+
+        gap: 40px;
+    }
+
+    .service-area-image img {
+
+        width: 100%;
+
+        max-width: 400px;
+    }
+
+    .service-area-text h1 {
+
+        font-size: 32px;
+    }
+
+    .service-area-text p {
+
+        font-size: 18px;
+    }
+
+    .client-list-section h1 {
+
+        font-size: 32px;
+    }
+
+    iframe {
+
+        height: 500px;
+    }
+}
